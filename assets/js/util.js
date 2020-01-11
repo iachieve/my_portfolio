@@ -617,17 +617,17 @@ function copyTextToClipboard(text) {
 	});
 }
 
-const copyHotMailBtn = document.querySelector('#copyHotMailBtn'),
-	copyGmailBtn = document.querySelector('#copyGmailBtn');
+// const copyHotMailBtn = document.querySelector('#copyHotMailBtn'),
+// 	copyGmailBtn = document.querySelector('#copyGmailBtn');
 
-copyHotMailBtn.addEventListener('click', function (event) {
-	copyTextToClipboard('mahlim80@hotmail.com');
-});
+// copyHotMailBtn.addEventListener('click', function (event) {
+// 	copyTextToClipboard('mahlim80@hotmail.com');
+// });
 
 
-copyGmailBtn.addEventListener('click', function (event) {
-	copyTextToClipboard('iachieve80@hotmail.com');
-});
+// copyGmailBtn.addEventListener('click', function (event) {
+// 	copyTextToClipboard('iachieve80@hotmail.com');
+// });
 
 
 
