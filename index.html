@@ -256,8 +256,8 @@
             <form id="jquery_form" data-aos="fade-right">
               <input type="text" name="subject" placeholder="Subject" style="margin-bottom: 0.5rem;" required/>
               <textarea name="text" placeholder="Message, Email, Phone" rows="6"  style="margin-bottom: 0.5rem;" required></textarea>
-                 <input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response">
-
+                 g-recaptcha-response<input type="text" id="g-recaptcha-response" name="g-recaptcha-response">
+                  token <input type="text" name="token" id="token">
               <input type="submit" name="send" value="Send" style="background-color: #5DA3D6; outline:none"/>
             </form>
               <!-- <div class="contact-ele"  data-aos="fade-right">
@@ -315,6 +315,7 @@
   <script>
     grecaptcha.ready(function() {
         grecaptcha.execute('6Lc4ds4UAAAAAKLVWhClCSGKfFPiBHNkAyahqsjs', {action: 'index'}).then(function(token) {
+          document.querySelector('#token').value = token;
           console.log(token)
         });
   });
