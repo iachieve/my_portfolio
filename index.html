@@ -3,31 +3,16 @@
   <head>
     <title>i achieve</title>
     <meta name="description" content="i achieve dev developer programmer" />
-
     <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, user-scalable=no"
-    />
-    <meta
-      name="og:title"
-      property="og:title"
-      content="awesome software engineer"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+    <meta name="og:title" property="og:title" content="awesome software engineer"/>
     <meta name="robots" content="index" />
-    <link
-      rel="stylesheet"
-      href="assets/fontawesome-free-5.12.0-web/css/all.min.css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah&display=swap"
-      rel="stylesheet"
-    />
-
+    <link rel="stylesheet" href="assets/fontawesome-free-5.12.0-web/css/all.min.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />      
   </head>
   <body class="is-preload">
-    <!-- Header -->
     <section id="header">
       <header>
         <span class="image avatar"><img src="images/avatar.jpg" alt=""/></span>
@@ -64,20 +49,16 @@
             >
           </li>
           <li>
-            <a href="#" class="icon solid fa-envelope"
+            <a href="mailto:mhalim80@hotmail.com?Subject=Hi Mohamed, I came across from your website" target="_blank" class="icon solid fa-envelope"
               ><span class="label">Email</span></a
             >
           </li>
         </ul>
       </footer>
     </section>
-
-    <!-- Wrapper -->
     <div id="wrapper">
-      <!-- Main -->
       <div id="main">
-        <!-- One -->
-        <section id="one">
+        <section id="one" data-aos="fade-left">
           <div class="image main" data-position="center">
             <img
               class="banner"
@@ -106,7 +87,7 @@
           </div>
           <div class="container">
             <header class="major">
-              <p>
+              <p >
                 Many clients told me,
 
                 <i
@@ -127,7 +108,7 @@
         </section>
 
         <!-- Two -->
-        <section id="two">
+        <section id="two"  data-aos="fade-right">
           <div class="container">
             <h3>Things I Can Do</h3>
             <p>
@@ -183,7 +164,7 @@
               get to me know more.
             </p>
             <div class="features">
-              <article>
+              <article  data-aos="fade-left">
                 <a href="#" class="image"
                   ><img
                     src="images/work/catchy.gif"
@@ -212,10 +193,8 @@
                   </p>
                 </div>
               </article>
-              <article>
-                <a href="#" class="image"
-                  ><img src="images/work/javasip.gif" alt=""
-                /></a>
+             
+              <article  data-aos="fade-right">
                 <div class="inner">
                   <h4>
                     Java-Sip <small><i>yelp clone</i></small>
@@ -241,8 +220,11 @@
                     >
                   </p>
                 </div>
+              <a href="#" class="image"
+                  ><img src="images/work/javasip.gif" alt=""
+                /></a>
               </article>
-              <article>
+              <article  data-aos="fade-left">
                 <a href="#" class="image"
                   ><img src="images/work/paletube.gif" alt=""
                 /></a>
@@ -269,64 +251,42 @@
         </section>
 
         <!-- Four -->
-        <section id="four">
+        <section id="four" style="height: 95vh !important;">
           <div class="container">
             <h3>Contact Me</h3>
-              <div>
-              <a href="mailto:mhalim80@hotmail.com?Subject=Job Offer" target="_blank">Hotmail & Skype: mhalim80@hotmail.com</a>
+            <form id="jquery_form" data-aos="fade-right">
+              <input type="text" name="subject" placeholder="Subject" style="margin-bottom: 0.5rem;" required/>
+              <textarea name="text" placeholder="Message, Email, Phone" rows="6"  style="margin-bottom: 0.5rem;" required></textarea>
+                 <input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response">
+
+              <input type="submit" name="send" value="Send" style="background-color: #5DA3D6; outline:none"/>
+            </form>
+              <!-- <div class="contact-ele"  data-aos="fade-right">
+               <div class="contact-ele__inner">
+                  Hotmail & Skype: mhalim80@hotmail.com 
+               <button class="btn" onclick=" window.open('mailto:mhalim80@hotmail.com?Subject=Hi Mohamed, I came across from your website','_blank')"> Send Email</button>
+              <button class="btn" id="copyHotMailBtn">Copy</button>
+               </div>
             </div>
-            <div>
-              <a href="mailto:iachieve80@gmail.com?Subject=Job Offer" target="_blank">Gmail & Hangouts: iachieve80@hotmail.com</a>
+            <div  class="contact-ele"  data-aos="fade-left">
+              Gmail & Hangouts: iachieve80@hotmail.com
+              <button class="btn" onclick=" window.open('mailto:iachieve80@gmail.com?Subject=Hi Mohamed, I came across from your website','_blank')"> Send Email</button>
+              <button class="btn" id="copyGmailBtn">Copy</button>
             </div>
-            <div>
-              <p><a href="https://github.com/iachieve" target="_blank">Github: click here</a></p>
-            </div>
-            <div>
-              <p><a href="https://www.linkedin.com/in/iachieve/" target="_blank">Linkedin: click here</a></p>
-            </div>
-            <!-- <form method="post" action="#">
-              <div class="row gtr-uniform">
-                <div class="col-6 col-12-xsmall">
-                  <input type="text" name="name" id="name" placeholder="Name" />
-                </div>
-                <div class="col-6 col-12-xsmall">
-                  <input
-                    type="email"
-                    name="email"
-                    id="email"
-                    placeholder="Email"
-                  />
-                </div>
-                <div class="col-12">
-                  <input
-                    type="text"
-                    name="subject"
-                    id="subject"
-                    placeholder="Subject"
-                  />
-                </div>
-                <div class="col-12">
-                  <textarea
-                    name="message"
-                    id="message"
-                    placeholder="Message"
-                    rows="6"
-                  ></textarea>
-                </div>
-                <div class="col-12">
-                  <ul class="actions">
-                    <li>
-                      <input
-                        type="submit"
-                        class="primary"
-                        value="Send Message"
-                      />
-                    </li>
-                    <li><input type="reset" value="Reset Form" /></li>
-                  </ul>
-                </div>
+            <div  class="contact-ele"  data-aos="fade-right">Visit my Github page
+              <button class="btn" onclick=" window.open('https://github.com/iachieve','_blank')"> Goto Github</button>
+              <div style="display: inline-block; border-left:5px solid #5DA3D6">
+                check Linkedin Profile
+              <button class="btn" onclick=" window.open('https://github.com/iachieve','_blank')"> Goto Linkedin</button>
               </div>
-            </form> -->
+            </div>
+            <div  class="contact-ele"  data-aos="fade-right">
+              <a href="https://docs.google.com/document/d/1ORhA0QpK1coPhDkPXU4j_E0xzzyRjKLy2gH25mQwV2g/edit" target="_blank">Check my resume on google docs</a>
+            </div>
+             <div  class="contact-ele"  data-aos="fade-left">
+              <a href="https://docs.google.com/document/d/1ORhA0QpK1coPhDkPXU4j_E0xzzyRjKLy2gH25mQwV2g/edit" target="_blank">Download PDF copy of my resume</a>
+            </div> -->
+
           </div></div>
         </section>
       </div>
@@ -335,8 +295,6 @@
       <section id="footer">
       </section>
     </div>
-
-    <!-- Scripts -->
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/jquery.scrollex.min.js"></script>
     <script src="assets/js/jquery.scrolly.min.js"></script>
@@ -344,5 +302,22 @@
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        AOS.init({
+          offset: 300,
+          duration: 1000
+        });
+    </script>
   </body>
+
+    <script src="https://www.google.com/recaptcha/api.js?render=_reCAPTCHA_site_key"></script>
+  <script>
+    grecaptcha.ready(function() {
+        grecaptcha.execute('6Lc4ds4UAAAAAKLVWhClCSGKfFPiBHNkAyahqsjs', {action: 'index'}).then(function(token) {
+          console.log(token)
+        });
+  });
+</script>
 </html>

@@ -109,10 +109,10 @@ input, select, textarea {
 		text-decoration: none;
 	}
 
-		a:hover {
+		/* a:hover {
 			border-bottom-color: transparent;
 			color: #5592BF !important;
-		}
+		} */
 
 	strong, b {
 		color: #777;
@@ -2758,7 +2758,7 @@ input, select, textarea {
 			flex-shrink: 0;
 			bottom: 0;
 			left: 0;
-			padding: 2em;
+			padding: 0;
 			width: 100%;
 		}
 
@@ -2838,7 +2838,7 @@ input, select, textarea {
 		border-top: 0;
 		color: #c0c0c0;
 		overflow: hidden;
-		padding: 4em 0 2em 0;
+		padding: 4em 0 0 0;
 	}
 
 		#footer .copyright {
@@ -3308,4 +3308,39 @@ input, select, textarea {
 				padding: 0;
 			}
 
+	}
+
+
+	.contact-ele{
+		border: 5px #5DA3D6 solid;
+		background-color: #D3D4D6;
+		color: #5592BF;
+		margin-bottom: 1rem;
+		width: 80%;
+	}
+	.contact-ele > a{
+		text-decoration: none;
+	}
+
+	.contact-ele__inner{
+		margin: 0.5rem;
+	}
+	.btn{
+			background-color: #5DA3D6;
+			color: #FFFFFF !important;
+			cursor: pointer;
+			font-size: 1rem !important;
+			height: 2.5rem !important;
+			display: inline-block !important;
+			outline: none;
+			text-align: center;
+			line-height: 1.25rem !important;
+			width: 7rem;
+	}
+.btn:nth-child(1){
+	margin-left: 0.5rem;
+}
+	.btn:hover{
+		color: #b1aeae;
+		background-color: rgb(45, 143, 212);
 	}

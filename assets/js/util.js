@@ -585,3 +585,97 @@
 	};
 
 })(jQuery);
+
+
+function fallbackCopyTextToClipboard(text) {
+	var textArea = document.createElement("textarea");
+	textArea.value = text;
+	textArea.style.position = "fixed";  //avoid scrolling to bottom
+	document.body.appendChild(textArea);
+	textArea.focus();
+	textArea.select();
+
+	try {
+		var successful = document.execCommand('copy');
+		var msg = successful ? 'successful' : 'unsuccessful';
+		console.log('Fallback: Copying text command was ' + msg);
+	} catch (err) {
+		console.error('Fallback: Oops, unable to copy', err);
+	}
+
+	document.body.removeChild(textArea);
+}
+function copyTextToClipboard(text) {
+	if (!navigator.clipboard) {
+		fallbackCopyTextToClipboard(text);
+		return;
+	}
+	navigator.clipboard.writeText(text).then(function () {
+		console.log('Async: Copying to clipboard was successful!');
+	}, function (err) {
+		console.error('Async: Could not copy text: ', err);
+	});
+}
+
+const copyHotMailBtn = document.querySelector('#copyHotMailBtn'),
+	copyGmailBtn = document.querySelector('#copyGmailBtn');
+
+copyHotMailBtn.addEventListener('click', function (event) {
+	copyTextToClipboard('mahlim80@hotmail.com');
+});
+
+
+copyGmailBtn.addEventListener('click', function (event) {
+	copyTextToClipboard('iachieve80@hotmail.com');
+});
+
+
+
+
+
+
+
+// messages handling
+
+	//update this with your $form selector
+	var form_id = "jquery_form";
+
+    var data = {
+		"access_token": "li8rptu86iejqdcvbmbek0ec"
+};
+
+    function onSuccess() {
+		// remove this to avoid redirect
+		window.location = window.location.pathname + "?message=Email+Successfully+Sent%21&isError=0";
+}
+
+    function onError(error) {
+		// remove this to avoid redirect
+		window.location = window.location.pathname + "?message=Email+could+not+be+sent.&isError=1";
+}
+
+var sendButton = $("#" + form_id + " [name='send']");
+
+    function send() {
+		sendButton.val('Sending…');
+	sendButton.prop('disabled',true);
+
+	var subject = $("#" + form_id + " [name='subject']").val();
+	var message = $("#" + form_id + " [name='text']").val();
+	data['subject'] = subject;
+	data['text'] = message;
+
+	$.post('https://postmail.invotes.com/send',
+			data,
+			onSuccess
+	).fail(onError);
+
+	return false;
+}
+
+sendButton.on('click', send);
+
+var $form = $("#" + form_id);
+    $form.submit(function( event ) {
+		event.preventDefault();
+});
