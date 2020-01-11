@@ -1,4 +1,4 @@
-@import url("fontawesome-all.min.css");
+/* @import url("fontawesome-all.min.css"); */
 @import url("https://fonts.googleapis.com/css?family=Lato:400,400italic,700,700italic|Source+Code+Pro:400");
 
 html, body, div, span, applet, object,
@@ -3343,4 +3343,10 @@ input, select, textarea {
 	.btn:hover{
 		color: #b1aeae;
 		background-color: rgb(45, 143, 212);
+	}
+
+	#subject:focus:required:invalid,
+	#text:focus:required:invalid,
+	#cpatchaTextBox:focus:required:invalid {
+		border: 2px solid red;
 	}

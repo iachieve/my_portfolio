@@ -639,29 +639,32 @@ function copyTextToClipboard(text) {
 
 	//update this with your $form selector
 	var form_id = "jquery_form";
-
     var data = {
 		"access_token": "li8rptu86iejqdcvbmbek0ec"
 };
-
     function onSuccess() {
 		// remove this to avoid redirect
-		window.location = window.location.pathname + "?message=Email+Successfully+Sent%21&isError=0";
+		// window.location = window.location.pathname + "?message=Email+Successfully+Sent%21&isError=0";
+		window.location = window.location.href;
+		alert('thank you, I received your message and will return you within couple hours.')
 }
 
     function onError(error) {
-		// remove this to avoid redirect
-		window.location = window.location.pathname + "?message=Email+could+not+be+sent.&isError=1";
+		// window.location = window.location.pathname + "?message=Email+could+not+be+sent.&isError=1";
+		alert('error happened')
 }
 
 var sendButton = $("#" + form_id + " [name='send']");
 
-    function send() {
-		sendButton.val('Sending…');
-	sendButton.prop('disabled',true);
-
+function send() {
 	var subject = $("#" + form_id + " [name='subject']").val();
 	var message = $("#" + form_id + " [name='text']").val();
+	if (!subject || !message || !validateCaptcha()){
+		return false;
+	}
+
+	sendButton.val('Sending…');
+	sendButton.prop('disabled',true);
 	data['subject'] = subject;
 	data['text'] = message;
 
@@ -669,7 +672,6 @@ var sendButton = $("#" + form_id + " [name='send']");
 			data,
 			onSuccess
 	).fail(onError);
-
 	return false;
 }
 
