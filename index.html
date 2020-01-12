@@ -7,13 +7,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
     <meta name="og:title" property="og:title" content="awesome software engineer"/>
     <meta name="robots" content="index" />
-    <link rel="shortcut icon" href="./images/favicon.webp" />
+    <link rel="shortcut icon" href="./images/favicon-min.png" />
     
   </head>
   <body class="is-preload">
     <section id="header">
       <header>
-        <span class="image avatar"><img src="images/avatar.webp" alt=""/></span>
+        <span class="image avatar">
+
+          <!-- <img src="images/avatar.jpg" alt=""/> -->
+        <picture>
+          <source srcset="images/avatar.webp" type="image/webp">
+          <source srcset="images/avatar.jpg" type="image/jpeg"> 
+          <img src="images/avatar.jpg" alt="Alt Text!">
+        </picture>
+
+
+
+        </span>
         <h1 id="logo">Mohamed Abdelhalim</h1>
       </header>
       <nav id="nav">
@@ -62,11 +73,14 @@
       <div id="main">
         <section id="about" data-aos="fade-left">
           <div class="image main" data-position="center">
-            <img
-              class="banner"
-              src="images/banner.webp"
-              alt="i achieve mohamed abdelhalim resume"
-            />
+
+            <!-- <img class="banner" src="images/banner.jpg" alt="i achieve mohamed abdelhalim resume"/> -->
+          <picture>
+            <source srcset="images/banner.webp" type="image/webp">
+            <source srcset="images/banner.jpg" type="image/jpeg"> 
+            <img src="images/banner.jpg" alt="Alt Text!">
+          </picture>
+
             <div
               style="position: absolute; top: 3rem; left: 2rem; color: #D3D4D6; transform: rotate(-10deg);"
             >
@@ -179,11 +193,14 @@
             </p>
             <div class="features">
               <article data-aos="fade-left">
-                <a href="images/work/catchy.webp" class="image" data-fancybox="gallery"
-                  ><img 
-                    src="images/work/catchy_preview-min.webp"
-                    alt=" i achieve mohamed abdelhalim resume catchy watchy"
-                /></a>
+                <a href="images/work/catchy.gif" class="image" data-fancybox="gallery">
+                  <!-- <img src="images/work/catchy_preview-min.png" alt=" i achieve mohamed abdelhalim resume catchy watchy"/> -->
+                  <picture>
+                    <source srcset="images/work/catchy_preview-min.webp" type="image/webp">
+                    <source srcset="images/work/catchy_preview-min.png" type="image/jpeg"> 
+                    <img src="images/work/catchy_preview-min.png" alt="Alt Text!">
+                </picture>
+                  </a>
                 <div class="inner">
                   <h4>
                     Catchy-Watchy <small><i>e-commerce clone</i></small>
@@ -234,14 +251,26 @@
                     >
                   </p>
                 </div>
-                <a href="images/work/javasip.webp" class="image" data-fancybox="gallery"
-                  ><img src="images/work/javasip_preview.webp" alt="" 
-                /></a>
+                <a href="images/work/javasip.gif" class="image" data-fancybox="gallery">
+                  <!-- <img src="images/work/javasip_preview.png" alt="" /> -->
+
+                <picture>
+                    <source srcset="images/work/javasip_preview.webp" type="image/webp">
+                    <source srcset="images/work/javasip_preview.png" type="image/jpeg"> 
+                    <img src="images/work/javasip_preview.png" alt="Alt Text!">
+                </picture>
+
+              </a>
               </article>
               <article data-aos="fade-left">
-                <a href="images/work/paletube.webp" class="image" data-fancybox="gallery"
-                  ><img src="images/work/paltube_preview.webp" alt=""  
-                /></a>
+                <a href="images/work/paletube.gif" class="image" data-fancybox="gallery">
+                  <!-- <img src="images/work/paltube_preview.png" alt="" /> -->
+                <picture>
+                    <source srcset="images/work/paltube_preview.webp" type="image/webp">
+                    <source srcset="images/work/paltube_preview.png" type="image/jpeg"> 
+                    <img src="images/work/paltube_preview.png" alt="Alt Text!">
+                </picture>
+              </a>
                 <div class="inner">
                   <h4>
                     Pal-Tube <small><i>youtube clone</i></small>
@@ -329,7 +358,7 @@
     <script src="https://kit.fontawesome.com/f2795b618c.js" crossorigin="anonymous" defer></script>
     <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <script src="assets/js//captch.js"></script>
+    <script src="assets/js/captch.js"></script>
 
 <script>
       AOS.init({
