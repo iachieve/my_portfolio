@@ -659,6 +659,7 @@ var sendButton = $("#" + form_id + " [name='send']");
 function send() {
 	var subject = $("#" + form_id + " [name='subject']").val();
 	var message = $("#" + form_id + " [name='text']").val();
+	var contact = $("#" + form_id + " [name='contact']").val();
 	if (!subject || !message || !validateCaptcha()){
 		return false;
 	}
@@ -666,7 +667,7 @@ function send() {
 	sendButton.val('Sending…');
 	sendButton.prop('disabled',true);
 	data['subject'] = subject;
-	data['text'] = message;
+	data['text'] = 'from -- ' + contact + '  --  ' + message;
 
 	$.post('https://postmail.invotes.com/send',
 			data,
